@@ -32,7 +32,7 @@ saludar()
 
 ---
 
-**El resultado en al ejecutar este programa sería:**
+**El resultado al ejecutar este programa es el siguiente:**
 
 ```
 >>> Antes de la ejecución
