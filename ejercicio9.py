@@ -1,0 +1,27 @@
+"""
+Decoradores con argumentos
+Un decorador es una función que recibe una función y regresa una función (al menos)
+Lo utilizamos para extender funcionalidad de una función
+1. funcion_decorador_a (a)
+2. funcion_a_decorar_b (b)
+3. funcion_decorada_c (c)
+a(b) -> c
+"""
+
+def funcion_decorador_a(funcion_a_decorar_b):
+    
+    def funcion_decorada_c(*args):
+        print("Antes de la funcion_decorada_c")
+        resultado = funcion_a_decorar_b(*args)
+        print("Después de la funcion_decorada_c")
+        return resultado
+
+    return funcion_decorada_c
+
+@funcion_decorador_a
+def sumar(a, b, c):
+
+    return a + b + c
+
+resultado = sumar(5, 6, 4)
+print(f"El resultado de la suma es: {resultado}")
